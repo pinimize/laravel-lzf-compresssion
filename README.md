@@ -26,7 +26,7 @@ If you don't see 'lzf' in the output, you'll need to install the extension befor
 Once the LZF extension is installed, you can install the package via composer:
 
 ```bash
-composer require pinimize/lzf-extension
+composer require pinimize/laravel-lzf-compresssion
 ```
 
 ## Prerequisites
@@ -55,16 +55,7 @@ Your complete compression configuration should look something like this:
     'default' => env('COMPRESSION_DRIVER', 'gzip'),
     'mixin' => env('COMPRESSION_REGISTER_MIXIN', true),
     'drivers' => [
-        'gzip' => [
-            'level' => env('GZIP_LEVEL', -1),
-            'encoding' => FORCE_GZIP,
-            'disk' => env('COMPRESSION_DISK', null),
-        ],
-        'zlib' => [
-            'level' => env('ZLIB_LEVEL', -1),
-            'encoding' => ZLIB_ENCODING_DEFLATE,
-            'disk' => env('COMPRESSION_DISK', null),
-        ],
+        ... // Other drivers
         'lzf' => [
             'disk' => env('COMPRESSION_DISK', null),
         ],
