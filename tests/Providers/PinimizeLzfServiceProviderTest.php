@@ -3,7 +3,6 @@
 namespace Pinimize\Lzf\Tests\Providers;
 
 use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Str;
 use PHPUnit\Framework\Attributes\Test;
 use Pinimize\Facades\Compression;
 use Pinimize\Facades\Decompression;
